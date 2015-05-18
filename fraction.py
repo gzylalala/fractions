@@ -10,7 +10,6 @@ class Fraction:
                 if b == 0:
                         a = "Undefined"
                         b = "Undefined"
-                        return "Undefined"
                 self.a = a
                 self.b = b
                 if abs(a) != a and abs(b) != b or abs(a) == a and abs(b) != b:
