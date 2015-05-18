@@ -42,6 +42,7 @@ class Fraction:
 
 
 class Controller:
+        '''Creates a Controller object, currently used to easily get Fractions and perform operations between them'''
         def __init__(self):
                 pass
         def getFraction(self, a, b):
@@ -61,4 +62,5 @@ class Controller:
                 return self.multiply(frA, frB.getReciprocal())
 
 def getController():
+        '''Gets a controller object'''
         return Controller()
