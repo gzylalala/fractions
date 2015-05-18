@@ -67,6 +67,19 @@ class Controller:
         def divide(self, frA, frB):
                 '''Divides two fractions'''
                 return self.multiply(frA, frB.getReciprocal())
+        def add(self, frA, frB):
+                '''Adds two fractions'''
+                aS = [frA.a, frB.a]
+                bS = [frA.b, frB.b]
+                if bS[0] != bS[1]:
+                        k = bS[0] * bS[1]
+                        #aS[0] = aS[0] * (k / bS[0])
+                        for x in range(0, 2):
+                                aS[x] = aS[x] * (k / bS[x])
+                                bS[x] = k
+                fr = self.getFraction(aS[0] + aS[1], bS[0])
+                fr.reduce()
+                return fr
 
 def getController():
         '''Gets a controller object'''
