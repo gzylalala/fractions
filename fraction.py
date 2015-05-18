@@ -80,6 +80,9 @@ class Controller:
                 fr = self.getFraction(aS[0] + aS[1], bS[0])
                 fr.reduce()
                 return fr
+        def subtract(self, frA, frB):
+                '''Subtracts two fractions'''
+                return self.add(frA, Fraction(frB.a * -1, frB.b))
 
 def getController():
         '''Gets a controller object'''
