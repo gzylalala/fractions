@@ -23,14 +23,16 @@ class Fraction:
                         self.a = self.a / k
                         self.b = self.b / k
         def printFraction(self):
-                '''The standard way of writing fractions'''
+                '''Returns the standard way of writing fractions ie. 3/6'''
                 return str(self.a) + "/" + str(self.b)
         def getReciprocal(self):
+                '''Returns the reciprocal of the fraction (does not modify the object itself'''
                 if self.a != 0:
                         return Fraction(self.b, self.a)
                 else:
                         return Fraction("Undefined", "Undefined")
         def reciprocate(self):
+                '''Modifies the object into its reciprocal (and doesn't return anything)'''
                 if self.a != 0:
                         k = self.a
                         self.a = self.b
@@ -39,15 +41,18 @@ class Fraction:
                         self.a = "Undefined"
                         self.b = "Undefined"
         def printDecimal(self):
-                print float(self.a) / float(self.b)
+                '''Returns the decimal form of the fraction ie. 1/2 > 0.5'''
+                return float(self.a) / float(self.b)
 
 
 class Controller:
         def __init__(self):
                 pass
         def getFraction(self, a, b):
+                '''Returns a fraction of the form a/b'''
                 return Fraction(a,b)
         def multiply(self, frA, frB):
+                '''Multiplies two fractions together'''
                 a = frA.a * frB.a
                 b = frA.b * frB.b
                 inst = Fraction(a, b)
@@ -59,6 +64,7 @@ class Controller:
                 #return Fraction(a,b)
                 return inst
         def divide(self, frA, frB):
+                '''Divides two fractions'''
                 return self.multiply(frA, frB.getReciprocal())
 
 def getController():
