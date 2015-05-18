@@ -17,6 +17,7 @@ class Fraction:
                         self.b = self.b * -1
                 self.reduce()
         def reduce(self):
+                '''Reduces fraction down to lowest terms ie. 3/6 > 1/2'''
                 while gcd(self.a, self.b) != 1:
                         k = gcd(self.a, self.b)
                         self.a = self.a / k
