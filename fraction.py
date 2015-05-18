@@ -22,7 +22,8 @@ class Fraction:
                         self.a = self.a / k
                         self.b = self.b / k
         def printFraction(self):
-                print str(self.a) + "/" + str(self.b)
+                '''The standard way of writing fractions'''
+                return str(self.a) + "/" + str(self.b)
         def getReciprocal(self):
                 if self.a != 0:
                         return Fraction(self.b, self.a)
