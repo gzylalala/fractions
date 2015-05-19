@@ -7,6 +7,8 @@ Todo:
 
 -Fully test fraction subtraction
 
+-Fully test the mixed fraction code
+
 -Better handling of fractions with 0 in the denominator
 
 -Better handling of fractions that are equal to 1 (reducing down to 1, not 1/1) and 0 (reducing down to zero)
