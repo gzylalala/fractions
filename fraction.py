@@ -45,15 +45,21 @@ class Fraction:
                 return float(self.a) / float(self.b)
         def printMixed(self):
                 '''Returns a mixed fraction ie. 5/3 > 1 2/3 and -5/3 > -1 2/3'''
+                if self.a == 0:
+                        return "0"
                 a = abs(self.a)
                 count = 0
                 while a / self.b > 0:
                         count += 1
                         a -= self.b
-                if abs(self.a) != self.a:
+                if abs(self.a) != self.a and count != 0:
                         count = count * -1
-                return str(count) + " " + str(a) + "/" + str(self.b)
-
+                elif abs(self.a) != self.a and count == 0:
+                        a = a * -1
+                if count != 0:
+                        return str(count) + " " + str(a) + "/" + str(self.b)
+                else:
+                        return str(a) + "/" + str(self.b)
 
 class Controller:
         '''Creates a Controller object, currently used to easily get Fractions and perform operations between them'''
