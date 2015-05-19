@@ -34,7 +34,7 @@ class Fraction:
                 else:
                         return Fraction("Undefined", "Undefined")
         def reciprocate(self):
-                '''Modifies the object into its reciprocal (and doesn't return anything)'''
+                '''Modifies the instance into its reciprocal (and doesn't return anything)'''
                 if self.a != 0:
                         k = self.a
                         self.a = self.b
@@ -70,7 +70,7 @@ class Fraction:
                 return sqrt(self.a) / sqrt(self.b)
 
 class Controller:
-        '''Creates a Controller object, currently used to easily get Fractions and perform operations between them'''
+        '''Creates a Controller instance, currently used to easily get Fractions and perform operations between them'''
         def __init__(self):
                 pass
         def getFraction(self, a, b):
@@ -109,5 +109,5 @@ class Controller:
                 return self.add(frA, Fraction(frB.a * -1, frB.b))
 
 def getController():
-        '''Gets a controller object'''
+        '''Gets a controller instance'''
         return Controller()
