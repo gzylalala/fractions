@@ -3,9 +3,9 @@ Playing around with creating my own system for fractions in Python
 
 Todo:
 
--Fraction addition
+-Fully test fraction addition
 
--Fraction subtraction
+-Fully test fraction subtraction
 
 -Better handling of fractions with 0 in the denominator
 
