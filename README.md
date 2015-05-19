@@ -3,6 +3,8 @@ Playing around with creating my own system for fractions in Python
 
 Todo:
 
+-Testing on Python 3 (this was developed using Python 2.7.3)
+
 -Fully test fraction addition
 
 -Fully test fraction subtraction
