@@ -49,7 +49,7 @@ class Fraction:
                 count = 0
                 while a / self.b > 0:
                         count += 1
-                        a = a - self.b
+                        a -= self.b
                 if abs(self.a) != self.a:
                         count = count * -1
                 return str(count) + " " + str(a) + "/" + str(self.b)
