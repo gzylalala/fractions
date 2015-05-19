@@ -43,6 +43,16 @@ class Fraction:
         def printDecimal(self):
                 '''Returns the decimal form of the fraction ie. 1/2 > 0.5'''
                 return float(self.a) / float(self.b)
+        def printMixed(self):
+                '''Returns a mixed fraction ie. 5/3 > 1 2/3 and -5/3 > -1 2/3'''
+                a = abs(self.a)
+                count = 0
+                while a / self.b > 0:
+                        count += 1
+                        a = a - self.b
+                if abs(self.a) != self.a:
+                        count = count * -1
+                return str(count) + " " + str(a) + "/" + str(self.b)
 
 
 class Controller:
