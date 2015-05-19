@@ -15,4 +15,6 @@ Todo:
 
 -(Hopefully) move away from the controller model of handling operations between fractions (will need some research and thought but should hopefully be doable)
 
+-Determine if there is a nicer way to have the controller instance in the Fraction.square() function without having to make a new one.
+
 -Implement square rooting (both exact and decimal forms)
