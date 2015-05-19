@@ -26,7 +26,7 @@ class Fraction:
                 '''Returns the standard way of writing fractions ie. 3/6'''
                 return str(self.a) + "/" + str(self.b)
         def getReciprocal(self):
-                '''Returns the reciprocal of the fraction (does not modify the object itself'''
+                '''Returns the reciprocal of the fraction (does not modify the object itself)'''
                 if self.a != 0:
                         return Fraction(self.b, self.a)
                 else:
