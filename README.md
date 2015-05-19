@@ -20,3 +20,7 @@ Todo:
 -Determine if there is a nicer way to have the controller instance in the Fraction.square() function without having to make a new one.
 
 -Implement square rooting (both exact and decimal forms)
+
+-Potential redesign of the quick and dirty testing system
+
+-Add more tests to the testing system
