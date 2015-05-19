@@ -5,6 +5,8 @@ An alternate fraction system (still imports gcd from fractions though)
 from fractions import gcd #the function is simple enough that it can be moved into this file if needed. 
 #Until then, we rely on that system for one calculation
 
+from math import sqrt
+
 class Fraction:
         def __init__(self, a, b):
                 if b == 0:
@@ -61,7 +63,11 @@ class Fraction:
                 else:
                         return str(a) + "/" + str(self.b)
         def square(self):
+                '''Returns the square of the fraction'''
                 return Controller().multiply(self, self)
+        def printSqrtDecimal(self):
+                '''Prints in decimal form, eg. root 3/2 > 1.22474487139'''
+                return sqrt(self.a) / sqrt(self.b)
 
 class Controller:
         '''Creates a Controller object, currently used to easily get Fractions and perform operations between them'''
