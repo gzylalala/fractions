@@ -60,6 +60,8 @@ class Fraction:
                         return str(count) + " " + str(a) + "/" + str(self.b)
                 else:
                         return str(a) + "/" + str(self.b)
+        def square(self):
+                return Controller().multiply(self, self)
 
 class Controller:
         '''Creates a Controller object, currently used to easily get Fractions and perform operations between them'''
