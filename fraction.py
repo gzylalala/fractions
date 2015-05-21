@@ -68,9 +68,35 @@ class Fraction:
         def printSqrtDecimal(self):
                 '''Prints in decimal form, eg. root 3/2 > 1.22474487139'''
                 return sqrt(self.a) / sqrt(self.b)
+        def __mul__(frA, frB):
+                '''Multiplies two fractions together'''
+                a = frA.a * frB.a
+                b = frA.b * frB.b
+                inst = Fraction(a, b)
+                inst.reduce()
+                return inst
+        def __add__(frA, frB):
+                '''Adds two fractions'''
+                aS = [frA.a, frB.a]
+                bS = [frA.b, frB.b]
+                if bS[0] != bS[1]:
+                        k = bS[0] * bS[1]
+                        #aS[0] = aS[0] * (k / bS[0])
+                        for x in range(0, 2):
+                                aS[x] = aS[x] * (k / bS[x])
+                                bS[x] = k
+                fr = Fraction(aS[0] + aS[1], bS[0])
+                fr.reduce()
+                return fr
+        def __div__(frA, frB):
+                '''Multiplies two fractions together'''
+                return Fraction.__mul__(frA, frB.getReciprocal())
+        def __sub__(frA, frB):
+                '''Subtracts two fractions'''
+                return Fraction.__add__(frA, Fraction(frB.a * -1, frB.b))
 
 class Controller:
-        '''Creates a Controller instance, currently used to easily get Fractions and perform operations between them'''
+        '''DEPRECATED: Creates a Controller instance, currently used to easily get Fractions and perform operations between them'''
         def __init__(self):
                 pass
         def getFraction(self, a, b):
