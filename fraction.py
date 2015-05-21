@@ -5,6 +5,8 @@ An alternate fraction system (still imports gcd from fractions though)
 from fractions import gcd #the function is simple enough that it can be moved into this file if needed. 
 #Until then, we rely on that system for one calculation
 
+from math import sqrt
+
 class Fraction:
         def __init__(self, a, b):
                 if b == 0:
@@ -32,7 +34,7 @@ class Fraction:
                 else:
                         return Fraction("Undefined", "Undefined")
         def reciprocate(self):
-                '''Modifies the object into its reciprocal (and doesn't return anything)'''
+                '''Modifies the instance into its reciprocal (and doesn't return anything)'''
                 if self.a != 0:
                         k = self.a
                         self.a = self.b
@@ -61,10 +63,14 @@ class Fraction:
                 else:
                         return str(a) + "/" + str(self.b)
         def square(self):
+                '''Returns the square of the fraction'''
                 return Controller().multiply(self, self)
+        def printSqrtDecimal(self):
+                '''Prints in decimal form, eg. root 3/2 > 1.22474487139'''
+                return sqrt(self.a) / sqrt(self.b)
 
 class Controller:
-        '''Creates a Controller object, currently used to easily get Fractions and perform operations between them'''
+        '''Creates a Controller instance, currently used to easily get Fractions and perform operations between them'''
         def __init__(self):
                 pass
         def getFraction(self, a, b):
@@ -103,5 +109,5 @@ class Controller:
                 return self.add(frA, Fraction(frB.a * -1, frB.b))
 
 def getController():
-        '''Gets a controller object'''
+        '''Gets a controller instance'''
         return Controller()

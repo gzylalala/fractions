@@ -3,6 +3,8 @@ Playing around with creating my own system for fractions in Python
 
 Todo:
 
+-Testing on Python 3 (this was developed using Python 2.7.3)
+
 -Fully test fraction addition
 
 -Fully test fraction subtraction
@@ -18,3 +20,7 @@ Todo:
 -Determine if there is a nicer way to have the controller instance in the Fraction.square() function without having to make a new one.
 
 -Implement square rooting (both exact and decimal forms)
+
+-Potential redesign of the quick and dirty testing system
+
+-Add more tests to the testing system
