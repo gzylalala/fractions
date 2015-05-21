@@ -64,7 +64,8 @@ class Fraction:
                         return str(a) + "/" + str(self.b)
         def square(self):
                 '''Returns the square of the fraction'''
-                return Controller().multiply(self, self)
+                #return Controller().multiply(self, self) #Deprecated Method
+                return self * self
         def printSqrtDecimal(self):
                 '''Prints in decimal form, eg. root 3/2 > 1.22474487139'''
                 return sqrt(self.a) / sqrt(self.b)
