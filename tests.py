@@ -30,7 +30,7 @@ s = f.getController()
 a = s.getFraction(1,2)
 b = s.getFraction(1,3)
 
-test(a, fra(1,2))
+test(a, fra(1,2)) #deprecated tests
 test(b, fra(1,3))
 test(s.add(a,b), fra(5,6))
 test(s.subtract(a,b), fra(1,6))
@@ -42,7 +42,20 @@ test(c, fra(7,3))
 
 test(c.printMixed(), "2 1/3")
 
+'''Non deprecated tests'''
 
+test(a + b, fra(5,6))
+test(a - b, fra(1,6))
+test(a * b, fra(1,6))
+test(a / b, fra(3,2))
+
+d = s.getFraction(-4, 27)
+test(d, fra(-4,27))
+
+test(a + d, fra(19,54))
+test(a - d, fra(35,54))
+test(a * d, fra(-2,27))
+test(a / d, fra(-27,8))
 
 
 '''Beyond this point is summary code'''
