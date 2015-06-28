@@ -90,7 +90,7 @@ class Fraction:
                 fr.reduce()
                 return fr
         def __div__(frA, frB):
-                '''Multiplies two fractions together'''
+                '''Divides two fractions'''
                 return Fraction.__mul__(frA, frB.getReciprocal())
         def __sub__(frA, frB):
                 '''Subtracts two fractions'''
