@@ -69,6 +69,11 @@ class Fraction:
         def printSqrtDecimal(self):
                 '''Prints in decimal form, eg. root 3/2 > 1.22474487139'''
                 return sqrt(self.a) / sqrt(self.b)
+        def printNthRootDecimal(self, root):
+                '''Prints in decimal form, eg. cube root of 27/8 > 3/2 > 1.5
+                Currently untested (just putting it down so I won't forget the idea, testing soon(tm)!)
+                '''
+                return ((float(self.a) ** (1.0/float(root))) / (float(self.a) ** (1.0/float(root))))
         def __mul__(frA, frB):
                 '''Multiplies two fractions together'''
                 a = frA.a * frB.a
