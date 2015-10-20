@@ -17,8 +17,6 @@ Todo:
 
 -Better handling of fractions that are equal to 1 (reducing down to 1, not 1/1) and 0 (reducing down to zero)
 
--Determine if there is a nicer way to have the controller instance in the Fraction.square() function without having to make a new one.
-
 -Implement square rooting (both exact and decimal forms)
 
 -Potential redesign of the quick and dirty testing system
