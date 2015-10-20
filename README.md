@@ -1,7 +1,7 @@
 # fractions
 Playing around with creating my own system for fractions in Python
 
-Todo:
+**Todo:**
 
 -Testing on Python 3 (this was developed using Python 2.7.3)
 
@@ -17,6 +17,6 @@ Todo:
 
 -Potential redesign of the quick and dirty testing system (with more tests)
 
-Todo Topics that SHOULD be complete:
+**Todo Topics that SHOULD be complete:**
 
 -Complete move over from controller method (now deprecated but still valid), test new squaring function to ensure it still works
