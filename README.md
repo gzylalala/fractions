@@ -5,11 +5,7 @@ Todo:
 
 -Testing on Python 3 (this was developed using Python 2.7.3)
 
--Complete move over from controller method (now deprecated but still valid), test new squaring function to ensure it still works
-
--Fully test fraction addition
-
--Fully test fraction subtraction
+-Fully test fraction addition and subtraction
 
 -Fully test the mixed fraction code (and shorten any code that can be removed easily)
 
@@ -19,6 +15,8 @@ Todo:
 
 -Implement square rooting (both exact and decimal forms)
 
--Potential redesign of the quick and dirty testing system
+-Potential redesign of the quick and dirty testing system (with more tests)
 
--Add more tests to the testing system
+Todo Topics that SHOULD be complete:
+
+-Complete move over from controller method (now deprecated but still valid), test new squaring function to ensure it still works
