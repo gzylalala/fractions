@@ -97,14 +97,16 @@ class Fraction:
                 return Fraction.__add__(frA, Fraction(frB.a * -1, frB.b))
 
 class Controller:
-        '''DEPRECATED: Creates a Controller instance, currently used to easily get Fractions and perform operations between them'''
+        '''DEPRECATED:  PLEASE USE THE FRACTION CLASS ONLY WHEN PERFORMING OPERATIONS (more features, supported, etc.)
+        Creates a Controller instance, currently used to easily get Fractions and perform operations between them
+        '''
         def __init__(self):
                 pass
         def getFraction(self, a, b):
-                '''Returns a fraction of the form a/b'''
+                '''DEPRECATED: Returns a fraction of the form a/b'''
                 return Fraction(a,b)
         def multiply(self, frA, frB):
-                '''Multiplies two fractions together'''
+                '''DEPRECATED: Multiplies two fractions together'''
                 a = frA.a * frB.a
                 b = frA.b * frB.b
                 inst = Fraction(a, b)
@@ -116,10 +118,10 @@ class Controller:
                 #return Fraction(a,b)
                 return inst
         def divide(self, frA, frB):
-                '''Divides two fractions'''
+                '''DEPRECATED: Divides two fractions'''
                 return self.multiply(frA, frB.getReciprocal())
         def add(self, frA, frB):
-                '''Adds two fractions'''
+                '''DEPRECATED: Adds two fractions'''
                 aS = [frA.a, frB.a]
                 bS = [frA.b, frB.b]
                 if bS[0] != bS[1]:
@@ -132,9 +134,11 @@ class Controller:
                 fr.reduce()
                 return fr
         def subtract(self, frA, frB):
-                '''Subtracts two fractions'''
+                '''DEPRECATED: Subtracts two fractions'''
                 return self.add(frA, Fraction(frB.a * -1, frB.b))
 
 def getController():
-        '''Gets a controller instance'''
+        '''DEPRECATED: PLEASE USE THE FRACTION CLASS ONLY WHEN PERFORMING OPERATIONS (more features, supported, etc.)
+        Gets a controller instance
+        '''
         return Controller()
