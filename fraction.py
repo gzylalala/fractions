@@ -2,9 +2,11 @@
 An alternate fraction system (still imports gcd from fractions though)
 '''
 
-from fractions import gcd #the function is simple enough that it can be moved into this file if needed. 
-#Until then, we rely on that system for one calculation
-
+from fractions import gcd 
+'''
+The function is simple enough that it can be moved into this file if needed. 
+Until then, we rely on that system for one calculation
+'''
 from math import sqrt
 
 class Fraction:
